@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!--FONT FAMILY -> SPARTAN -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+
+  <!--Custom CSS-->
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+<body>
+
+      <header>
+        <h1 id="main-logo">calc</h1>
+
+        <div class="toggle-button">
+
+          <h4 id="theme-logo">THEME</h4>
+        
+          <div class="switch-button">
+            <div id="theme1" class="switch" onclick="changeTheme('theme1')">1</div>
+            <div id="theme2" class="switch" onclick="changeTheme('theme2')">2</div>
+            <div id="theme3" class="switch" onclick="changeTheme('theme3')">3</div>
+            <div id="selector" class="selector">
+              <div id="selector-ball"></div>
+            </div>
+          </div>
+      
+        </div>
+      </header>
+
+      <div class="calculator-app">
+        <div class="windowToShow"></div>
+
+        <div class="panelKeys">
+          <div class="key" id="key7" onclick="keyPress(7)" >7</div>
+          <div class="key" id="key8" onclick="keyPress(8)" >8</div>
+          <div class="key" id="key9" onclick="keyPress(9)" >9</div>
+          <div class="key-Del" id="keyDel" onclick="keyPress('delete')">DEL</div>
+          <div class="key" id="key4" onclick="keyPress(4)" >4</div>
+          <div class="key" id="key5" onclick="keyPress(5)" >5</div>
+          <div class="key" id="key6" onclick="keyPress(6)" >6</div>
+          <div class="key" id="keyPlus" onclick="keyPress('plus')">+</div>
+          <div class="key" id="key1" onclick="keyPress(1)" >1</div>
+          <div class="key" id="key2" onclick="keyPress(2)" >2</div>
+          <div class="key" id="key3" onclick="keyPress(3)" >3</div>
+          <div class="key" id="keyLess" onclick="keyPress('less')">-</div>
+          <div class="key" id="keyPoint" onclick="keyPress('point')">.</div>
+          <div class="key" id="key0" onclick="keyPress(0)" >0</div>
+          <div class="key" id="keyDivision" onclick="keyPress('division')">/</div>
+          <div class="key" id="keyMultiply" onclick="keyPress('multiply')">×</div>
+          <div class="big-Key-Reset" id="keyReset" onclick="keyPress('reset')">RESET</div>
+          <div class="big-Key-Equal" id="keyEqual" onclick="keyPress('result')">=</div>
+        </div>
+      </div>
+
+      
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/paulxcz">Paulxcz</a>.
+  </div>
+
+  <script src="./js/main.js" type="text/javascript"></script>
+</body>
+</html>

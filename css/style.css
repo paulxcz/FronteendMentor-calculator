@@ -1,0 +1,181 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+body {
+  padding: 0 23px;
+  font-family: "Spartan", sans-serif;
+  background-color: #3a4764;
+}
+
+header {
+  width: 100%;
+  height: 73px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header h1 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: white;
+}
+
+header .toggle-button {
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .toggle-button h4 {
+  color: white;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding-right: 20px;
+  padding-bottom: 4px;
+  font-size: 12px;
+}
+
+header .toggle-button .switch-button .switch {
+  display: inline-block;
+  padding: 0 7px;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+header .toggle-button .switch-button .selector {
+  height: 26px;
+  width: 70px;
+  border-radius: 12px;
+  background-color: #404e72;
+  position: relative;
+  cursor: pointer;
+}
+
+header .toggle-button .switch-button .selector #selector-ball {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #d03f2f;
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.calculator-app .windowToShow {
+  width: 100%;
+  height: 90px;
+  background-color: #182034;
+  border-radius: 10px;
+  margin-bottom: 22px;
+  text-align: right;
+  padding: 25px;
+  color: white;
+  font-size: 32px;
+  overflow: auto;
+}
+
+.calculator-app .panelKeys {
+  width: 100%;
+  height: 415px;
+  background-color: #232c43;
+  border-radius: 10px;
+  padding: 25px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+  gap: 13px;
+}
+
+.calculator-app .panelKeys * {
+  border-radius: 6px;
+  color: #35352c;
+  font-size: 32px;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.calculator-app .panelKeys .key {
+  background-color: #eae3dc;
+  -webkit-box-shadow: 0px 4px 0px 0px #b4a597;
+          box-shadow: 0px 4px 0px 0px #b4a597;
+}
+
+.calculator-app .panelKeys .key-Del {
+  background-color: #637097;
+  -webkit-box-shadow: 0px 4px 0px 0px #404e72;
+          box-shadow: 0px 4px 0px 0px #404e72;
+  color: white;
+  font-size: 20px;
+}
+
+.calculator-app .panelKeys .big-Key-Reset {
+  background-color: #637097;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  -webkit-box-shadow: 0px 4px 0px 0px #404e72;
+          box-shadow: 0px 4px 0px 0px #404e72;
+  color: white;
+  font-size: 20px;
+}
+
+.calculator-app .panelKeys .big-Key-Equal {
+  background-color: #d03f2f;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3/5;
+  -webkit-box-shadow: 0px 4px 0px 0px #93261a;
+          box-shadow: 0px 4px 0px 0px #93261a;
+  color: white;
+}
+
+.attribution {
+  margin-top: 50px;
+  color: #c84b31;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: #346751;
+}
+
+@media screen and (min-width: 1040px) {
+  body {
+    padding: 75px 350px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    padding: 95px 450px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,215 @@
+//Font family
+$fontfamily: 'Spartan', sans-serif;
+$fontSizeNumbers: 32px;
+
+//theme1
+$theme1Background: hsl(222, 26%, 31%);
+$theme1KeypadBackground: hsl(223, 31%, 20%);
+$theme1ScreenBackground: hsl(224, 36%, 15%);
+
+//KEYS 1
+$theme1Key1BlueBackground: hsl(225, 21%, 49%);
+$theme1Key1BlueShadow: hsl(224, 28%, 35%);
+
+$theme1Key1Toggle: hsl(6, 63%, 50%);
+$theme1Key1ToggleShadow: hsl(6, 70%, 34%);
+
+$theme1Key1normal: hsl(30, 25%, 89%);
+$theme1Key1normalShadow : hsl(29, 16%, 65%);
+
+//Text 1
+$TextDarkGrayishBlue : hsl(221, 14%, 31%);
+$TextWhite:hsl(0, 0, 100%);
+
+
+//theme 2
+$theme2Background: hsl(0, 0%, 90%);
+$theme2KeypadBackground: hsl(0, 5%, 81%);
+$theme2ScreenBackground: hsl(0, 0%, 93%);
+
+//KEYS 2
+$theme1Key2BlueBackground: hsl(185, 42%, 37%);
+$theme1Key2BlueShadow: hsl(185, 58%, 25%);
+
+$theme1Key2Toggle: hsl(25, 98%, 40%);
+$theme1Key2ToggleShadow: hsl(25, 99%, 27%);
+
+$theme1Key2normal: hsl(45, 7%, 89%);
+$theme1Key2normalShadow : hsl(35, 11%, 61%);
+
+//Text 2
+$TextDarkGrayishBlue : hsl(60, 10%, 19%);
+
+
+//theme3
+$theme3Background: hsl(268, 75%, 9%);
+$theme3Keypad-ScreenBackground: hsl(268, 71%, 12%);
+
+//KEYS 3
+$theme3Key3BlueBackground: hsl(281, 89%, 26%);
+$theme3Key3BlueShadow: hsl(285, 91%, 52%);
+
+$theme3Key3Toggle: hsl(176, 100%, 44%);
+$theme3Key3ToggleShadow: hsl(177, 92%, 70%);
+
+$theme3Key3normal: hsl(268, 47%, 21%);
+$theme3Key3normalShadow : hsl(290, 70%, 36%);
+
+//Text 3
+$TextLightYellow: hsl(52, 100%, 62%);
+$TextDarkBlue: hsl(198, 20%, 13%);
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 0.3s linear;
+}
+
+body{
+    padding: 0 23px;
+    font-family: $fontfamily;
+    background-color: $theme1Background;
+}
+
+header{
+    width: 100%;
+    height: 73px;
+    display: flex;
+    justify-content: space-between;
+    h1{
+        align-self: center;
+        color: $TextWhite;
+    }
+
+    .toggle-button{
+        align-self: center;
+        display: flex;
+        
+        h4{
+            color: $TextWhite;
+            align-self: flex-end;
+            padding-right: 20px;
+            padding-bottom: 4px;
+            font-size: 12px;
+        }
+        .switch-button{
+
+            .switch{
+                display: inline-block;
+                padding: 0 7px;
+                color: $TextWhite;
+                font-size: 12px;
+                cursor: pointer;
+                
+            }
+            
+            .selector{
+                height: 26px;
+                width: 70px;
+                border-radius: 12px;
+                background-color: $theme1Key1BlueShadow;
+                position: relative;
+                cursor: pointer;
+
+                #selector-ball{
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background-color: $theme1Key1Toggle;
+                    position: absolute;
+                    top: 3px;
+                    left: 2px;
+                    transition: all 0.5s ease;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.calculator-app{
+
+    .windowToShow{
+        width: 100%;
+        height: 90px;
+        background-color: $theme1ScreenBackground;
+        border-radius: 10px;
+        margin-bottom: 22px ;
+        text-align: right;
+        padding: 25px;
+        color: $TextWhite;
+        font-size: $fontSizeNumbers;
+        overflow: auto;
+    }
+
+    .panelKeys{
+        width: 100%;
+        height: 415px;
+        background-color: $theme1KeypadBackground;
+        border-radius: 10px;
+        padding: 25px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 13px;
+        
+        *{
+            border-radius: 6px;
+            color: $TextDarkGrayishBlue;
+            font-size: $fontSizeNumbers;
+            font-weight: 700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .key{
+            background-color: $theme1Key1normal;
+            box-shadow: 0px 4px 0px 0px rgba(180,165,151,1);
+        }
+
+        .key-Del{
+            background-color: $theme1Key1BlueBackground;
+            box-shadow: 0px 4px 0px 0px $theme1Key1BlueShadow;
+            color: $TextWhite;
+            font-size: 20px;
+        }
+
+        .big-Key-Reset{
+            background-color: $theme1Key1BlueBackground;
+            grid-column: 1/3;
+            box-shadow: 0px 4px 0px 0px $theme1Key1BlueShadow;
+            color: $TextWhite;
+            font-size: 20px;
+        }
+
+        .big-Key-Equal{
+            background-color: $theme1Key1Toggle;
+            grid-column: 3/5;
+            box-shadow: 0px 4px 0px 0px $theme1Key1ToggleShadow;
+            color: $TextWhite;
+        }
+    }
+
+}
+
+.attribution{
+    margin-top: 50px;
+    color: #c84b31;
+    a{
+        text-decoration: none;
+        color: #346751;
+    }
+}
+@media screen and(min-width: 1040px) {
+    body{
+        padding: 75px 350px;
+    }
+}
+
+@media screen and(min-width: 1440px) {
+    body{
+        padding: 95px 450px;
+    }
+}
